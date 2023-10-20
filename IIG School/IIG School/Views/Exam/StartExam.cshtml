@@ -1,0 +1,67 @@
+﻿@model IEnumerable<IIG_School.Models.Question>
+@{
+    ViewData["Title"] = "Thi Thử";
+}
+<!--? slider Area Start-->
+<section class="slider-area slider-area2">
+    <div class="slider-active">
+        <!-- Single Slider -->
+        <div class="single-slider slider-height2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-8 col-lg-11 col-md-12">
+                        <div class="hero__caption hero__caption2">
+                            <h1 data-animation="bounceIn" data-delay="0.2s">@ViewData["Title"]</h1>
+                            <h1 class="d-flex" data-animation="bounceIn" data-delay="0.2s"><i class="fa-solid fa-clock me-2"></i><span class="text-white" id="countdown">20:00</span></h1>
+                            <!-- breadcrumb End -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--? Start Sample Area -->
+<section class="sample-text-area">
+    <div class="container">
+        <form asp-action="StartExam" class="row justify-content-center align-items-center">
+            <div asp-validation-summary="ModelOnly" class="text-danger" method="post"></div>
+            @{
+                var QuestionNumber = 0;
+                foreach (var question in Model)
+                {
+                    <h3></h3>
+                    <div class="Question my-3">
+                        <h1>@(QuestionNumber += 1). @question.QuestionName</h1>
+                        @foreach (var answer in question.Answers!)
+                        {
+                            <input type="radio" id="@answer.Id" name="answer[@answer.QuestionId]" value="@answer.Id" />
+                            <label for="@answer.Id" class="fs-4">@answer.AnswerName</label>
+                            <br />
+                        }
+                    </div>
+                }
+            }
+            <button id="countdown-form" type="submit" class="btn btn-primary text-center" style="max-width: 20rem;">Nộp Bài</button>
+        </form>
+    </div>
+</section>
+
+@section Scripts {
+    <script>
+        var timer = 600; // 10 phút đổi thành giây
+
+        function updateCountdown() {
+            timer--;
+            if (timer <= 0) {
+                document.getElementById("countdown-form").submit(); // Khi hết thời gian, thực hiện POST request
+            } else {
+                var minutes = Math.floor(timer / 60);
+                var seconds = timer % 60;
+                document.getElementById("countdown").textContent = (minutes < 10 ? "0" : "") + minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
+            }
+        }
+
+        setInterval(updateCountdown, 1000);
+    </script>
+}

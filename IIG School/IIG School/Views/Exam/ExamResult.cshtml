@@ -1,0 +1,239 @@
+﻿@model double
+@{
+    ViewData["Title"] = "Exam Result";
+}
+
+<section class="slider-area slider-area2">
+    <div class="slider-active">
+        <!-- Single Slider -->
+        <div class="single-slider slider-height2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-8 col-lg-11 col-md-12">
+                        <div class="hero__caption hero__caption2">
+                            <h1 data-animation="bounceIn" data-delay="0.2s">@ViewData["Title"]</h1>
+                            <!-- breadcrumb End -->s
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--? Start Sample Area -->
+<section class="about-area1 fix pt-10">
+    <div class="support-wrapper align-items-center">
+        <div class="left-content1">
+            <div class="about-icon">
+                <img src="~/img/icon/about.svg" alt="">
+            </div>
+            <!-- section tittle -->
+            <div class="section-tittle section-tittle2 mb-55">
+                <div class="front-text">
+                    <h2 class="">Exam Test Result</h2>
+                    <p>Congratulations on completing your test and below is a review of your level.</p>
+                </div>
+            </div>
+            @{
+                if (Model < 3.0)
+                {
+                    <div class="single-features">
+                        <div class="features-icon">
+                            <img src="~/img/icon/right-icon.svg" alt="">
+                        </div>
+                        <div class="features-caption">
+                            <p>Basic proficiency in using English.</p>
+                        </div>
+                    </div>
+
+                    <div class="single-features">
+                        <div class="features-icon">
+                            <img src="~/img/icon/right-icon.svg" alt="">
+                        </div>
+                        <div class="features-caption">
+                            <p>Ability to understand and use some basic vocabulary and sentences.</p>
+                        </div>
+                    </div>
+
+                    <div class="single-features">
+                        <div class="features-icon">
+                            <img src="~/img/icon/right-icon.svg" alt="">
+                        </div>
+                        <div class="features-caption">
+                            <p>Difficulty in understanding and communicating in real-life situations.</p>
+                        </div>
+                    </div>
+                }
+                else if (Model >= 3.0 && Model < 6.0)
+                {
+                    <div class="single-features">
+                        <div class="features-icon">
+                            <img src="~/img/icon/right-icon.svg" alt="">
+                        </div>
+                        <div class="features-caption">
+                            <p>Basic knowledge of grammar and vocabulary.</p>
+                        </div>
+                    </div>
+
+                    <div class="single-features">
+                        <div class="features-icon">
+                            <img src="~/img/icon/right-icon.svg" alt="">
+                        </div>
+                        <div class="features-caption">
+                            <p>Ability to communicate in simple everyday situations.</p>
+                        </div>
+                    </div>
+
+                    <div class="single-features">
+                        <div class="features-icon">
+                            <img src="~/img/icon/right-icon.svg" alt="">
+                        </div>
+                        <div class="features-caption">
+                            <p>Needs improvement in understanding and participating in more complex conversations.</p>
+                        </div>
+                    </div>
+                }
+                else if (Model >= 6.0 && Model < 8.0)
+                {
+                    <div class="single-features">
+                        <div class="features-icon">
+                            <img src="~/img/icon/right-icon.svg" alt="">
+                        </div>
+                        <div class="features-caption">
+                            <p>Good knowledge of grammar and vocabulary.</p>
+                        </div>
+                    </div>
+
+                    <div class="single-features">
+                        <div class="features-icon">
+                            <img src="~/img/icon/right-icon.svg" alt="">
+                        </div>
+                        <div class="features-caption">
+                            <p>Can communicate in most daily situations and work contexts.</p>
+                        </div>
+                    </div>
+
+                    <div class="single-features">
+                        <div class="features-icon">
+                            <img src="~/img/icon/right-icon.svg" alt="">
+                        </div>
+                        <div class="features-caption">
+                            <p>Able to read and write simple texts.</p>
+                        </div>
+                    </div>
+                }
+                else if (Model >= 8.0 && Model < 10.0)
+                {
+                    <div class="single-features">
+                        <div class="features-icon">
+                            <img src="~/img/icon/right-icon.svg" alt="">
+                        </div>
+                        <div class="features-caption">
+                            <p>Flexible and confident use of English in various situations.</p>
+                        </div>
+                    </div>
+
+                    <div class="single-features">
+                        <div class="features-icon">
+                            <img src="~/img/icon/right-icon.svg" alt="">
+                        </div>
+                        <div class="features-caption">
+                            <p>Diverse knowledge of grammar and vocabulary.</p>
+                        </div>
+                    </div>
+
+                    <div class="single-features">
+                        <div class="features-icon">
+                            <img src="~/img/icon/right-icon.svg" alt="">
+                        </div>
+                        <div class="features-caption">
+                            <p>Able to read and write complex texts, participate in in-depth discussions.</p>
+                        </div>
+                    </div>
+                }
+                else if (Model == 10.0)
+                {
+                    <div class="single-features">
+                        <div class="features-icon">
+                            <img src="~/img/icon/right-icon.svg" alt="">
+                        </div>
+                        <div class="features-caption">
+                            <p>Uses English as a native language.</p>
+                        </div>
+                    </div>
+
+                    <div class="single-features">
+                        <div class="features-icon">
+                            <img src="~/img/icon/right-icon.svg" alt="">
+                        </div>
+                        <div class="features-caption">
+                            <p>Outstanding knowledge of grammar and vocabulary.</p>
+                        </div>
+                    </div>
+
+                    <div class="single-features">
+                        <div class="features-icon">
+                            <img src="~/img/icon/right-icon.svg" alt="">
+                        </div>
+                        <div class="features-caption">
+                            <p>Able to read and write complex texts, participate in in-depth discussions with confidences.</p>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+        <div class="right-content1 text-center">
+            <h1>Your Score<br><br><strong>@Model đ</strong></h1>
+        </div>
+    </div>
+</section>
+<br>
+<br>
+<section class="about-area3 fix">
+    <div class="support-wrapper align-items-center">
+        <div class="right-content3">
+            <!-- img -->
+            <div class="right-img">
+                <img src="~/img/gallery/about3.png" alt="">
+            </div>
+        </div>
+        <div class="left-content3">
+            <!-- section tittle -->
+            <div class="section-tittle section-tittle2 mb-20">
+                <div class="front-text">
+                    <h2 class="">Learner outcomes on courses you will take</h2>
+                </div>
+            </div>
+            <div class="single-features">
+                <div class="features-icon">
+                    <img src="~/img/icon/right-icon.svg" alt="">
+                </div>
+                <div class="features-caption">
+                    <p>Techniques to engage effectively with vulnerable children and young people.</p>
+                </div>
+            </div>
+            <div class="single-features">
+                <div class="features-icon">
+                    <img src="~/img/icon/right-icon.svg" alt="">
+                </div>
+                <div class="features-caption">
+                    <p>
+                        Join millions of people from around the world
+                        learning together.
+                    </p>
+                </div>
+            </div>
+            <div class="single-features">
+                <div class="features-icon">
+                    <img src="~/img/icon/right-icon.svg" alt="">
+                </div>
+                <div class="features-caption">
+                    <p>
+                        Join millions of people from around the world learning together.
+                        Online learning is as easy and natural.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

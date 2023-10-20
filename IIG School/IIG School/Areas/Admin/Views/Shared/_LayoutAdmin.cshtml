@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    @{
+        await Html.RenderPartialAsync("_Meta");
+        await Html.RenderPartialAsync("_Style");
+    }
+</head>
+<body>
+    @{
+        await Html.RenderPartialAsync("_Header");
+        await Html.RenderPartialAsync("_SlideBar");
+    }
+    <main id="main" class="main">
+        @RenderBody()
+    </main>
+    @{
+        await Html.RenderPartialAsync("_Footer");
+    }
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

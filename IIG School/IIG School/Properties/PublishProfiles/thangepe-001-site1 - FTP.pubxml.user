@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAn/psYbLEzEys7AVKrkTi0gAAAAACAAAAAAAQZgAAAAEAACAAAADY9L5wkcOXmbEav9DByIvPKaCDL8JsTmJmh//wuahiVQAAAAAOgAAAAAIAACAAAABZzubWnVL+dgFmjE3ewKXvD0+nkLCIfTIcK56aBGUKjCAAAADtGnk/rx3ZtyfwXb0rHfDQi3c84fRctkcTHF30rcQUVUAAAABEG9fwLQQaAj+xpHsyiA6YooUO9Cjex4SC6sFi1QsyU+K0tnDjhi7TJtqS5trXXWKl5BDiDTW5m3i2x1gMks+s</EncryptedPassword>
+    <_PublishTargetUrl>ftp://win5253.site4now.net:21/site1</_PublishTargetUrl>
+    <History>False|2023-10-11T22:36:07.5588378Z;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="appsettings.Development.json">
+      <publishTime>10/08/2023 17:20:31</publishTime>
+    </File>
+    <File Include="appsettings.json">
+      <publishTime>10/08/2023 18:24:28</publishTime>
+    </File>
+    <File Include="dotnet-aspnet-codegenerator-design.dll">
+      <publishTime>08/03/2023 21:04:40</publishTime>
+    </File>
+    <File Include="Humanizer.dll">
+      <publishTime>01/29/2022 22:04:04</publishTime>
+    </File>
+    <File Include="IIG School.deps.json">
+      <publishTime>10/12/2023 05:33:32</publishTime>
+    </File>
+    <File Include="IIG School.exe">
+      <publishTime>10/12/2023 05:33:23</publishTime>
+    </File>
+    <File Include="IIG School.pdb">
+      <publishTime>10/12/2023 05:33:23</publishTime>
+    </File>
+    <File Include="IIG School.runtimeconfig.json">
+      <publishTime>10/09/2023 22:45:15</publishTime>
+    </File>
+    <File Include="MessagePack.Annotations.dll">
+      <publishTime>07/01/2020 20:05:20</publishTime>
+    </File>
+    <File Include="MessagePack.dll">
+      <publishTime>07/01/2020 20:05:38</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.Cryptography.KeyDerivation.dll">
+      <publishTime>08/25/2023 13:43:06</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.Mvc.Razor.Extensions.dll">
+      <publishTime>08/25/2023 13:41:16</publishTime>
+    </File>
+    <File Include="Microsoft.Bcl.AsyncInterfaces.dll">
+      <publishTime>10/20/2020 01:47:56</publishTime>
+    </File>
+    <File Include="Microsoft.Build.dll">
+      <publishTime>09/13/2022 06:29:46</publishTime>
+    </File>
+    <File Include="Microsoft.Build.Framework.dll">
+      <publishTime>09/13/2022 06:28:56</publishTime>
+    </File>
+    <File Include="Microsoft.CodeAnalysis.AnalyzerUtilities.dll">
+      <publishTime>06/06/2020 10:37:20</publishTime>
+    </File>
+    <File Include="Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>10/15/2021 01:42:34</publishTime>
+    </File>
+    <File Include="Microsoft.CodeAnalysis.CSharp.Features.dll">
+      <publishTime>10/15/2021 01:43:18</publishTime>
+    </File>
+    <File Include="Microsoft.CodeAnalysis.CSharp.Workspaces.dll">
+      <publishTime>10/15/2021 01:42:40</publishTime>
+    </File>
+    <File Include="Microsoft.CodeAnalysis.Features.dll">
+      <publishTime>10/15/2021 01:42:54</publishTime>
+    </File>
+    <File Include="Microsoft.CodeAnalysis.Scripting.dll">
+      <publishTime>10/15/2021 01:38:10</publishTime>
+    </File>
+    <File Include="Microsoft.CodeAnalysis.Workspaces.dll">
+      <publishTime>10/15/2021 01:38:16</publishTime>
+    </File>
+    <File Include="Microsoft.Data.SqlClient.dll">
+      <publishTime>09/21/2021 06:59:32</publishTime>
+    </File>
+    <File Include="Microsoft.DiaSymReader.dll">
+      <publishTime>06/11/2018 17:53:22</publishTime>
+    </File>
+    <File Include="Microsoft.DotNet.Scaffolding.Shared.dll">
+      <publishTime>08/03/2023 21:04:30</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.Caching.Memory.dll">
+      <publishTime>01/15/2022 02:54:16</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.DependencyModel.dll">
+      <publishTime>10/23/2021 06:47:38</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.FileProviders.Embedded.dll">
+      <publishTime>07/15/2023 09:50:46</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,66 @@
+﻿@{
+    ViewData["Title"] = "Start Exam";
+}
+<!--? slider Area Start-->
+<section class="slider-area slider-area2">
+    <div class="slider-active">
+        <!-- Single Slider -->
+        <div class="single-slider slider-height2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-8 col-lg-11 col-md-12">
+                        <div class="hero__caption hero__caption2">
+                            <h1 data-animation="bounceIn" data-delay="0.2s">@ViewData["Title"]</h1>
+                            <!-- breadcrumb Start-->
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a asp-action="Index" asp-controller="Home">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="#">@ViewData["Title"]</a></li>
+                                </ol>
+                            </nav>
+                            <!-- breadcrumb End -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--? Start Sample Area -->
+<section class="sample-text-area">
+    <div class="container d-flex justify-content-center">
+        <div class="card" style="max-width: 50rem;">
+            <div class="card-header fw-bold fs-2">
+                Exam Test
+            </div>
+            <div class="card-body">
+                <h1 class="card-title">Welcome, you are about to start the 10-minute Quick English Check</h1>
+                <br />
+                <div class="row align-items-center my-3">
+                    <div class="col-4 text-center fw-bold">
+                        <i class="fa-solid fa-book-open fs-1 mb-3"></i>
+                        <br>
+                        <span class="mt-1">Reading</span>
+                    </div>
+                    <div class="col-4 text-center fw-bold">
+                        <i class="fa-solid fa-caret-right fs-1 mb-3"></i>
+                    </div>
+                    <div class="col-4 text-center fw-bold">
+                        <i class="fa-regular fa-clock fs-1 mb-3"></i>
+                        <br>
+                        <span>10 minutes</span>
+                    </div>
+                </div>
+                <hr class="border-dark">
+                <div class="card-text container mb-4 ">
+                    <p><i class="fa-solid fa-caret-right me-2"></i>This test has one sections: reading</p>
+                    <p><i class="fa-solid fa-caret-right me-2"></i>You will start with a 10-minute reading section.</p>
+                    <p><i class="fa-solid fa-caret-right me-2"></i>Pace yourself to avoid running out of time.</p>
+                    <p><i class="fa-solid fa-caret-right me-2"></i>You will not lose points for wrong answers.</p>
+                    <p><i class="fa-solid fa-caret-right me-2"></i>Take advantage of the  "Full-screen" mode for an optimal test experience. You can always find this icon in the bottom-right corner of your screen.</p>
+                </div>
+                <a asp-controller="Exam" asp-action="StartExam" class="btn btn-primary rounded-4">Start Exam</a>
+            </div>
+        </div>
+    </div>
+</section>

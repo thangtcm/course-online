@@ -1,0 +1,287 @@
+﻿@model IEnumerable<IIG_School.Models.Product>
+@{
+    ViewData["Title"] = "Home";
+}
+<!--? slider Area Start-->
+<section class="slider-area ">
+    <div class="slider-active">
+        <!-- Single Slider -->
+        <div class="single-slider slider-height d-flex align-items-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-7 col-md-12">
+                        <div class="hero__caption">
+                            <h1 data-animation="fadeInLeft" data-delay="0.2s">Online learning<br> platform</h1>
+                            <p data-animation="fadeInLeft" data-delay="0.4s">Build skills with courses, certificates, and degrees online from world-class universities and companies</p>
+                            <a href="#" class="btn hero-btn" data-animation="fadeInLeft" data-delay="0.7s">Join for Free</a>
+                        </div>
+                    </div>
+                </div>
+            </div>          
+        </div>
+    </div>
+</section>
+<!-- ? services-area -->
+<div class="services-area">
+    <div class="container">
+        <div class="row justify-content-sm-center">
+            <div class="col-lg-4 col-md-6 col-sm-8">
+                <div class="single-services mb-30" style="min-height:22rem">
+                    <div class="features-icon">
+                        <img src="~/img/icon/icon1.svg" alt="">
+                    </div>
+                    <div class="features-caption">
+                        <h3>High quality video lectures</h3>
+                        <p>
+                            Taught by experienced TOEIC instructors who are former international students with prestigious university degrees.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-8">
+                <div class="single-services mb-30" style="min-height:22rem">
+                    <div class="features-icon">
+                        <img src="~/img/icon/icon2.svg" alt="">
+                    </div>
+                    <div class="features-caption">
+                        <h3>Filled with exam-like practice materials.</h3>
+                        <p>The document set has helped 600 students achieve Toeic 650 - 750 by October 2023.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-8">
+                <div class="single-services mb-30" style="min-height:22rem">
+                    <div class="features-icon">
+                        <img src="~/img/icon/icon3.svg" alt="">
+                    </div>
+                    <div class="features-caption">
+                        <h3>Life time access</h3>
+                        <p>The process seamlessly manages all the tasks for your online course website.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Courses area start -->
+<div class="courses-area section-padding40 fix">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-7 col-lg-8">
+                <div class="section-tittle text-center mb-55">
+                    <h2>Our featured courses</h2>
+                </div>
+            </div>
+        </div>
+        <div class="courses-actives">
+            @{
+                foreach(var product in Model)
+                {
+                    <div class="properties pb-20">
+                        <div class="properties__card">
+                            <div class="properties__img overlay1">
+                                <a href="#"><img src="~/Image/@product.ImageName" alt="@product.Id"></a>
+                            </div>
+                            <div class="properties__caption">
+                                <p>Course Name</p>
+                                <h3><a asp-controller="Product" asp-action="Detail" asp-route-Id="@product.Id">@product.ProductName</a></h3>
+                                <p class="text-break" style="max-height:10rem; display: -webkit-box; 
+                                                        -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden;">
+                                    @Html.Raw(product.ProductDescription!.Length > 250 ? product.ProductDescription!.Substring(0, 250) : product.ProductDescription)
+                                </p>
+                                <div class="properties__footer d-flex justify-content-between align-items-center">
+                                    <div class="restaurant-name">
+                                        <div class="rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half"></i>
+                                        </div>
+                                        <p><span>(4.5)</span> based on 120</p>
+                                    </div>
+                                    <div class="price">
+                                        <span>@product.ProductPrice.ToString("N0") đ</span>
+                                    </div>
+                                </div>
+                                <a asp-controller="Product" asp-action="Detail" asp-route-Id="@product.Id" class="border-btn border-btn2">BUY</a>
+                            </div>
+
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+</div>
+<!-- Courses area End -->
+<!--? About Area-3 Start -->
+<section class="about-area3 fix">
+    <div class="support-wrapper align-items-center">
+        <div class="right-content3">
+            <!-- img -->
+            <div class="right-img">
+                <img src="~/img/gallery/about3.png" alt="">
+            </div>
+        </div>
+        <div class="left-content3">
+            <!-- section tittle -->
+            <div class="section-tittle section-tittle2 mb-20">
+                <div class="front-text">
+                    <h2 class="">Learner outcomes on courses you will take</h2>
+                </div>
+            </div>
+            <div class="single-features">
+                <div class="features-icon">
+                    <img src="~/img/icon/right-icon.svg" alt="">
+                </div>
+                <div class="features-caption">
+                    <p>Time and Location Flexibility: Online courses allow you to study from anywhere and at any time that suits you. This is particularly convenient for individuals with busy schedules or those who cannot attend traditional classes.</p>
+                </div>
+            </div>
+            <div class="single-features">
+                <div class="features-icon">
+                    <img src="~/img/icon/right-icon.svg" alt="">
+                </div>
+                <div class="features-caption">
+                    <p>Customization: Online courses typically offer various difficulty levels, from basic to advanced. You can choose a course that matches your proficiency and focus on improving the specific English language skills you need.</p>
+                </div>
+            </div>
+            <div class="single-features">
+                <div class="features-icon">
+                    <img src="~/img/icon/right-icon.svg" alt="">
+                </div>
+                <div class="features-caption">
+                    <p>Diverse Learning Materials: Online courses provide a wide range of learning materials, including videos, audio, textbooks, and exercises. This helps you learn English through multiple mediums and enhance your listening, speaking, reading, and writing skills.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- About Area End -->
+<!--? Team -->
+<section class="team-area section-padding40 fix">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-7 col-lg-8">
+                <div class="section-tittle text-center mb-55">
+                    <h2>Partner</h2>
+                </div>
+            </div>
+        </div>
+        <div class="team-active">
+            <div class="single-cat text-center">
+                <div class="cat-icon">
+                    <img src="https://iigvietnam.com/wp-content/uploads/2021/05/sanako.png" alt="" style="max-width:15rem">
+                </div>
+            </div>
+            <div class="single-cat text-center">
+                <div class="cat-icon">
+                    <img src="https://iigvietnam.com/wp-content/uploads/2021/05/ICD.png" alt="" style="max-width:15rem">
+                </div>
+            </div>
+            <div class="single-cat text-center">
+                <div class="cat-icon">
+                    <img src="https://iigvietnam.com/wp-content/uploads/2021/05/CGFNS.png" alt="" style="max-width:15rem">
+                </div>
+            </div>
+            <div class="single-cat text-center">
+                <div class="cat-icon">
+                    <img src="https://iigvietnam.com/wp-content/uploads/2021/07/EMA.png" alt="" style="max-width:15rem">
+                </div>
+            </div>
+            <div class="single-cat text-center">
+                <div class="cat-icon">
+                    <img src="https://iigvietnam.com/wp-content/uploads/2021/05/Certiport.png" alt="" style="max-width:15rem">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Services End -->
+<section>
+    <div class="container shadow p-3 mb-5 bg-body rounded">
+        <h1 class="section-header fw-bold">Customers talk about IIG Vietnam</h1>
+        <div class="testimonials">
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="single-item">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="profile">
+                                        <div class="img-area">
+                                            <img src="https://iigvietnam.com/wp-content/uploads/2021/06/KH-Viettel.jpg" alt="">
+                                        </div>
+                                        <div class="bio">
+                                            <h2>Ms. Nguyen Ha Thanh</h2>
+                                            <h4>Director of Communications of Military Industry and Telecommunications Group (Viettel)</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="content">
+                                        <p><span><i class="fa fa-quote-left"></i></span>“Building a roadmap, implementing training, and organizing tests to improve English and IT skills that IIG conducted for Viettel Group employees has helped the staff perfect the necessary skills to improve their skills. High productivity and work efficiency. Hopefully the cooperation between both sides will bring many meanings in the work of upgrading Vietnamese human resources”</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="single-item">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="profile">
+                                        <div class="img-area">
+                                            <img src="https://iigvietnam.com/wp-content/uploads/2021/06/Pham-xuan-duong.jpg" alt="">
+                                        </div>
+                                        <div class="bio">
+                                            <h2>PGS. Pham Xuan Duong</h2>
+                                            <h4>Principal of Maritime University</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="content">
+                                        <p><span><i class="fa fa-quote-left"></i></span>“Maritime University has cooperated with IIG Vietnam to use and deploy international English and IT assessment standards for the past 10 years. Therefore, all generations of the school's students meet the necessary standards to become global citizens. The school's students have repeatedly achieved high results in national and international competitions, most recently reaching the National Champion in the World Office Informatics Championship - Viettel 2020”.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="single-item">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="profile">
+                                        <div class="img-area">
+                                            <img src="https://iigvietnam.com/wp-content/uploads/2021/08/TS.BS-Nguyen-Do-Ngoc-Linh-BV-Da-khoa-DN.png" alt="">
+                                        </div>
+                                        <div class="bio">
+                                            <h2>Ms. Nguyen Do Ngoc Linh</h2>
+                                            <h4>CEO Assistant, Da Nang Family General Hospital</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="content">
+                                        <p><span><i class="fa fa-quote-left"></i></span>In the context of integration, businesses urgently need personnel with office IT skills and international standard English proficiency. That helps employees develop their own abilities, advance their careers and help businesses expand international cooperation.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+        </div>
+    </div>
+</section>

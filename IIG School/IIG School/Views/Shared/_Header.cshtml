@@ -1,0 +1,47 @@
+﻿<header>
+    <div class="header-area header-transparent">
+        <div class="main-header ">
+            <div class="header-bottom  header-sticky">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <!-- Logo -->
+                        <div class="col-xl-2 col-lg-2">
+                            <div class="logo">
+                                <a asp-action="Index" asp-controller="Home"><img src="https://elearning.iigvietnam.com/images/logo-footer.png" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="col-xl-10 col-lg-10">
+                            <div class="menu-wrapper d-flex align-items-center justify-content-end">
+                                <!-- Main-menu -->
+                                <div class="main-menu d-none d-lg-block">
+                                    <nav>
+                                        <ul id="navigation">
+                                            <li><a asp-action="Index" asp-controller="Home" asp-area="">Home</a></li>
+                                            <li><a asp-action="Index" asp-controller="Product" asp-area="">Courses</a></li>
+                                            <li><a asp-action="Index" asp-controller="Exam" asp-area="">Practice Test</a></li>
+                                            <li><a asp-action="About" asp-controller="Home" asp-area="">About</a></li>
+                                            <li>
+                                                <a href="#">Organize Exam</a>
+                                                <ul class="submenu">
+                                                    <li><a asp-action="Register" asp-controller="Home" asp-area="">Registion Exam</a></li>
+                                                    <li><a asp-action="ExamResult" asp-controller="Home" asp-area="">Exam schedule and Result</a></li>
+                                                </ul>
+                                            </li>
+                                            <!-- Button -->
+                                            <partial name="_LoginPartial" />
+                                            <li class="button-header margin-left ">@await Html.PartialAsync("_CartPartial")</li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Mobile Menu -->
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

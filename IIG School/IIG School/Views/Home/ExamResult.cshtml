@@ -1,0 +1,128 @@
+﻿﻿@using X.PagedList.Mvc.Core;
+@using X.PagedList.Web.Common;
+@model X.PagedList.IPagedList<IIG_School.Models.ExcelDataModel>
+@{
+    ViewData["Title"] = "Exam schedule and results return";
+}
+
+<section class="slider-area ">
+    <div class="slider-active">
+        <!-- Single Slider -->
+        <div class="single-slider slider-height d-flex align-items-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-7 col-md-12">
+                        <div class="hero__caption">
+                            <h1 data-animation="fadeInLeft" data-delay="0.2s">Online learning<br> platform</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>          
+        </div>
+    </div>
+</section>
+<div class="whole-wrap">
+    <div class="container box_1170">
+        <div class="section-top-border">
+            <div class="text-center mb-3">
+                <div class="header-area">
+                    <h1>Exam schedule and results return</h1>
+                </div>
+                <form asp-action="ExamResult" asp-controller="Home" method="get" class="row align-items-center justify-content-center">
+                    <div class="col-12 col-lg-3">
+                        <select name="examId" asp-items="ViewBag.Exam">
+                            <option value="0">Select Exam</option>
+                        </select>
+                    </div>
+                    <div class="col-12 col-lg-3">
+                        <select name="addressExamId" asp-items="ViewBag.AddressExam">
+                            <option value="0">Select Address</option>
+                        </select>
+                    </div>
+                    <div class="col-12 col-lg-3">
+                        <input type="text" name="dateFirst" class="form-control dateselect" style="width: 100%;">
+                    </div>
+                    <div class="col-12 col-lg-3">
+                        <input type="text" name="dateEnd" class="form-control dateselect2" style="width: 100%;">
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 20rem; margin-top: 5rem;">Find</button>
+                </form>
+            </div>
+            <div class="progress-table-wrap">
+                <div class="progress-table">
+                    <div class="table-head">
+                        <div class="serial">#</div>
+                        <div class="visit">Exam</div>
+                        <div class="visit">Date Exam</div>
+                        <div class="visit">Time Exam</div>
+                        <div class="country">Address</div>
+                        <div class="country">Date Result</div>
+                    </div>
+                    @{
+                        foreach(var value in Model)
+                        {
+                            <div class="table-row">
+                                <div class="serial">@value.Id</div>
+                                <div class="visit">@value.ExamName</div>
+                                <div class="visit">@value.ExamDate</div>
+                                <div class="visit">@value.ExamTime</div>
+                                <div class="country">@value.Location</div>
+                                <div class="country">
+                                    @value.Note
+                                </div>
+                            </div>
+                        }
+                    }
+                </div>
+            </div>
+            <div class="mt-3">
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination align-items-center justify-content-center">
+                        <li class="page-item">
+                            @if (Model.HasPreviousPage)
+                            {
+                                <a class="btn btn-primary" href="@Url.Action("ExamResult", new { page = Model.PageNumber - 1, examId = ViewBag.ExamId, addressExamId = ViewBag.AddressExamId, dateFirst = ViewBag.DateFirst, dateEnd = ViewBag.DateEnd })" aria-label="Previous">
+                                    <span aria-hidden="true">Previous</span>
+                                </a>
+                            }
+                            else
+                            {
+                                <a class="btn btn-primary" aria-label="Previous" disabled>
+                                    <span aria-hidden="true">Previous</span>
+                                </a>
+                            }
+                        </li>
+                        @{
+                            var start = Model.PageNumber > 2 ? Model.PageNumber - 2 : 1;
+                            var end = Model.PageNumber > 2 ? Model.PageNumber + 2 : 5;
+                        }
+                        @for (int pageNumber = start; pageNumber <= end; pageNumber++)
+                        {
+                            if (pageNumber >= 1 && pageNumber <= Model.PageCount)
+                            {
+                                <li class="page-item mx-2 @(pageNumber == Model.PageNumber ? "active" : "") @(pageNumber == start ? "ms-auto" : "")">
+                                    <a class="page-link btn" href="@Url.Action("ExamResult", new { page = pageNumber, examId = ViewBag.ExamId, addressExamId = ViewBag.AddressExamId, dateFirst = ViewBag.DateFirst, dateEnd = ViewBag.DateEnd })">@pageNumber</a>
+                                </li>
+                            }
+                        }
+                        <li class="page-item ms-auto">
+                            @if (Model.HasNextPage)
+                            {
+                                <a class="btn btn-primary" href="@Url.Action("ExamResult", new { page = Model.PageNumber + 1, examId = ViewBag.ExamId, addressExamId = ViewBag.AddressExamId, dateFirst = ViewBag.DateFirst, dateEnd = ViewBag.DateEnd })" aria-label="Next">
+                                    <span aria-hidden="true">Next</span>
+                                </a>
+                            }
+                            else
+                            {
+                                <a class="btn btn-primary" aria-label="Next" disabled>
+                                    <span aria-hidden="true">Next</span>
+                                </a>
+                            }
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>
+        </div>
+    </div>
+</div>

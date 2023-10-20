@@ -1,0 +1,32 @@
+﻿@using IIG_School.Helpers;
+<aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+        <li class="nav-item">
+            <a class="nav-link @ManageMenuPage.MainNavClass(ViewContext, "HomeAdmin")" asp-area="Admin" asp-action="Idnex" asp-controller="HomeAdmin">
+                <i class="bi bi-grid"></i>
+                <span>Dashboard</span>
+            </a>
+        </li><!-- End Dashboard Nav -->
+
+        <li class="nav-heading">Sản Phẩm</li>
+
+        <li class="nav-item">
+            <a class="nav-link @ManageMenuPage.MainNavClass(ViewContext, "Product", "Index")" asp-action="Index" asp-area="Admin" asp-controller="Products">
+                <i class="bi bi-person"></i>
+                <span>Sản Phẩm</span>
+            </a>
+        </li><!-- End Profile Page Nav -->
+        <li class="nav-heading">Câu Hỏi</li>
+
+        <li class="nav-item">
+            <a class="nav-link @ManageMenuPage.MainNavClass(ViewContext, "Question", "Create")" asp-action="Create" asp-area="Admin" asp-controller="ExamResult">
+                <i class="bi bi-question-circle"></i>
+                <span>Dữ liệu kết quả thi</span>
+            </a>
+        </li>
+
+    </ul>
+
+</aside><!-- End Sidebar-->

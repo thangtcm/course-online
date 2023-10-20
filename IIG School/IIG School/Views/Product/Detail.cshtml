@@ -1,0 +1,460 @@
+﻿@model IIG_School.Models.Product
+
+@{
+    ViewData["Title"] = "Couse Detail";
+}
+<section class="slider-area slider-area2">
+    <div class="slider-active">
+        <!-- Single Slider -->
+        <div class="single-slider slider-height2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-8 col-lg-11 col-md-12">
+                        <div class="hero__caption hero__caption2">
+                            <h1 data-animation="bounceIn" data-delay="0.2s">Our courses</h1>
+                            <!-- breadcrumb Start-->
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="#">@ViewData["Title"]</a></li>
+                                </ol>
+                            </nav>
+                            <!-- breadcrumb End -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="courses-area section-padding40 fix">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-7 col-lg-8">
+                <div class="section-tittle text-center mb-55">
+                    <h2>Our featured courses</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 posts-list">
+                <div class="single-post">
+                    <div class="feature-img">
+                        <img class="img-fluid" src="~/Image/@Model.ImageName" alt="logo">
+                    </div>
+                    <div class="blog_details">
+                        <h2 style="color: #2d2d2d;">
+                            @Model.ProductName
+                        </h2>
+                        <ul class="blog-info-link mt-3 mb-4">
+                            <li><a href="#"><i class="fa fa-user"></i> Travel, Lifestyle</a></li>
+                            <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
+                        </ul>
+                        @Html.Raw(Model.ProductDescription)
+                    </div>
+                </div>
+                <div class="navigation-top">
+                    <div class="d-sm-flex justify-content-between text-center">
+                        <p class="like-info">
+                            <span class="align-middle"><i class="fa fa-heart"></i></span> Lily and 4
+                            people like this
+                        </p>
+                        <div class="col-sm-4 text-center my-2 my-sm-0">
+                            <!-- <p class="comment-count"><span class="align-middle"><i class="fa fa-comment"></i></span> 06 Comments</p> -->
+                        </div>
+                        <ul class="social-icons">
+                            <li><a href="https://www.facebook.com/sai4ull"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fab fa-dribbble"></i></a></li>
+                            <li><a href="#"><i class="fab fa-behance"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="navigation-area">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-12 nav-left flex-row d-flex justify-content-start align-items-center">
+                                <div class="thumb">
+                                    <a href="#">
+                                        <img class="img-fluid" src="https://iigvietnam.com/wp-content/uploads/2021/05/Ed-2.png" alt="" style="max-width:5rem">
+                                    </a>
+                                </div>
+                                <div class="arrow">
+                                    <a href="#">
+                                        <span class="lnr text-white ti-arrow-left"></span>
+                                    </a>
+                                </div>
+                                <div class="detials">
+                                    <p>Prev Post</p>
+                                    <a href="#">
+                                        <h4 style="color: #2d2d2d;">Space The Final Frontier</h4>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-12 nav-right flex-row d-flex justify-content-end align-items-center">
+                                <div class="detials">
+                                    <p>Next Post</p>
+                                    <a href="#">
+                                        <h4 style="color: #2d2d2d;">Telescopes 101</h4>
+                                    </a>
+                                </div>
+                                <div class="arrow">
+                                    <a href="#">
+                                        <span class="lnr text-white ti-arrow-right"></span>
+                                    </a>
+                                </div>
+                                <div class="thumb">
+                                    <a href="#">
+                                        <img class="img-fluid" src="https://iigvietnam.com/wp-content/uploads/2023/04/MODULE-1-2-3.png" alt="" style="max-width:5rem">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="comments-area">
+                    <h4>05 Comments</h4>
+                    <div class="comment-list">
+                        <div class="single-comment justify-content-between d-flex">
+                            <div class="user justify-content-between d-flex">
+                                <div class="thumb">
+                                    <img src="https://w.ladicdn.com/s400x400/615519bfee7b60007400d9d1/329711303_1012461759718696_581002370532191481_n-20230313075216-8si89.jpg" alt="">
+                                </div>
+                                <div class="desc">
+                                    <p class="comment">
+                                        Các video bài giảng của giáo viên là mình thấy hay nhất vì cô giảng dễ hiểu, giải thích chi tiết, thường là mình vừa làm bài vừa nghe video, rồi có cuốn sổ ghi chép lại từ vựng và 1 số ngữ pháp quan trọng.
+                                    </p>
+                                    <div class="d-flex justify-content-between">
+                                        <div class="d-flex align-items-center">
+                                            <p class="date">December 4, 2017 at 3:12 pm </p>
+                                        </div>
+                                        <div class="reply-btn">
+                                            <a href="#" class="btn-reply text-uppercase">reply</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment-list">
+                        <div class="single-comment justify-content-between d-flex">
+                            <div class="user justify-content-between d-flex">
+                                <div class="thumb">
+                                    <img src="https://w.ladicdn.com/s400x400/615519bfee7b60007400d9d1/100684879_1434830526720265_9221220455807975424_n-20230313080230-iplrd.jpg" alt="">
+                                </div>
+                                <div class="desc">
+                                    <p class="comment">
+                                        785 TOEIC là điều mà một đứa kém tiếng Anh từ nhỏ, ở tỉnh lẻ như mình chưa bao giờ nghĩ đến. Khóa học được xây dựng rất khóa học. Cứ hết khóa này mình lại học tiếp và thấy rất vui mỗi khi thấy kết quả thi lại tăng lên.
+                                    </p>
+                                    <div class="d-flex justify-content-between">
+                                        <div class="d-flex align-items-center">
+                                            <p class="date">December 4, 2017 at 3:12 pm </p>
+                                        </div>
+                                        <div class="reply-btn">
+                                            <a href="#" class="btn-reply text-uppercase">reply</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment-list">
+                        <div class="single-comment justify-content-between d-flex">
+                            <div class="user justify-content-between d-flex">
+                                <div class="thumb">
+                                    <img src="https://w.ladicdn.com/s400x400/615519bfee7b60007400d9d1/335930414_808831607239891_5133468517130528792_n-20230313080901-gjay8.png" alt="">
+                                </div>
+                                <div class="desc">
+                                    <p class="comment">
+                                        Thầy cô tuy chỉ giảng online nhưng vẫn rất dễ hiểu. Giao diện cũng rất dễ dùng, dễ học và đặc biệt là giúp mình cải thiện kỹ năng rất nhanh.
+                                    </p>
+                                    <div class="d-flex justify-content-between">
+                                        <div class="d-flex align-items-center">
+                                            <p class="date">December 4, 2017 at 3:12 pm </p>
+                                        </div>
+                                        <div class="reply-btn">
+                                            <a href="#" class="btn-reply text-uppercase">reply</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="comment-form">
+                    <h4>Leave a Reply</h4>
+                    <form class="form-contact comment_form" action="#" id="commentForm">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <textarea class="form-control w-100" name="comment" id="comment" cols="30" rows="9"
+                                              placeholder="Write Comment"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <input class="form-control" name="name" id="name" type="text" placeholder="Name">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <input class="form-control" name="email" id="email" type="email" placeholder="Email">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <input class="form-control" name="website" id="website" type="text" placeholder="Website">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="button button-contactForm btn_1 boxed-btn">Post Comment</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-8">
+                <div class="blog_right_sidebar">
+                    <div class="box-style mb-30" id="uideck_product_details-2">
+                        <h3 class="mb-20 text-bold">Pro Version Includes</h3>
+                        <ul class="included-features mb-30">
+                            <li class="mb-15">
+                                <span class="icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10.0001 18.3333C14.6025 18.3333 18.3334 14.6024 18.3334 10C18.3334 5.39763 14.6025 1.66667 10.0001 1.66667C5.39771 1.66667 1.66675 5.39763 1.66675 10C1.66675 14.6024 5.39771 18.3333 10.0001 18.3333Z"
+                                              fill="#ABA8DF"></path>
+                                        <path d="M16.1341 4.3591C16.5131 4.77108 16.8512 5.22134 17.1418 5.70343L10.3452 12.5C9.69441 13.1508 8.63908 13.1508 7.98824 12.5L5.66082 10.1726C5.33539 9.84717 5.33539 9.3195 5.66082 8.99408C5.98626 8.66867 6.5139 8.66867 6.83934 8.99408L9.16675 11.3215L16.0775 4.41074C16.0957 4.39251 16.1146 4.37529 16.1341 4.3591Z"
+                                              fill="#4F46E5"></path>
+                                    </svg>
+                                </span>
+                                <span>Full Download Package</span>
+                            </li>
+                            <li class="mb-15">
+                                <span class="icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10.0001 18.3333C14.6025 18.3333 18.3334 14.6024 18.3334 10C18.3334 5.39763 14.6025 1.66667 10.0001 1.66667C5.39771 1.66667 1.66675 5.39763 1.66675 10C1.66675 14.6024 5.39771 18.3333 10.0001 18.3333Z"
+                                              fill="#ABA8DF"></path>
+                                        <path d="M16.1341 4.3591C16.5131 4.77108 16.8512 5.22134 17.1418 5.70343L10.3452 12.5C9.69441 13.1508 8.63908 13.1508 7.98824 12.5L5.66082 10.1726C5.33539 9.84717 5.33539 9.3195 5.66082 8.99408C5.98626 8.66867 6.5139 8.66867 6.83934 8.99408L9.16675 11.3215L16.0775 4.41074C16.0957 4.39251 16.1146 4.37529 16.1341 4.3591Z"
+                                              fill="#4F46E5"></path>
+                                    </svg>
+                                </span>
+                                <span>Commercial License</span>
+                            </li>
+                            <li class="mb-15">
+                                <span class="icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10.0001 18.3333C14.6025 18.3333 18.3334 14.6024 18.3334 10C18.3334 5.39763 14.6025 1.66667 10.0001 1.66667C5.39771 1.66667 1.66675 5.39763 1.66675 10C1.66675 14.6024 5.39771 18.3333 10.0001 18.3333Z"
+                                              fill="#ABA8DF"></path>
+                                        <path d="M16.1341 4.3591C16.5131 4.77108 16.8512 5.22134 17.1418 5.70343L10.3452 12.5C9.69441 13.1508 8.63908 13.1508 7.98824 12.5L5.66082 10.1726C5.33539 9.84717 5.33539 9.3195 5.66082 8.99408C5.98626 8.66867 6.5139 8.66867 6.83934 8.99408L9.16675 11.3215L16.0775 4.41074C16.0957 4.39251 16.1146 4.37529 16.1341 4.3591Z"
+                                              fill="#4F46E5"></path>
+                                    </svg>
+                                </span>
+                                <span>All Sections and Elements</span>
+                            </li>
+                            <li class="mb-15">
+                                <span class="icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10.0001 18.3333C14.6025 18.3333 18.3334 14.6024 18.3334 10C18.3334 5.39763 14.6025 1.66667 10.0001 1.66667C5.39771 1.66667 1.66675 5.39763 1.66675 10C1.66675 14.6024 5.39771 18.3333 10.0001 18.3333Z"
+                                              fill="#ABA8DF"></path>
+                                        <path d="M16.1341 4.3591C16.5131 4.77108 16.8512 5.22134 17.1418 5.70343L10.3452 12.5C9.69441 13.1508 8.63908 13.1508 7.98824 12.5L5.66082 10.1726C5.33539 9.84717 5.33539 9.3195 5.66082 8.99408C5.98626 8.66867 6.5139 8.66867 6.83934 8.99408L9.16675 11.3215L16.0775 4.41074C16.0957 4.39251 16.1146 4.37529 16.1341 4.3591Z"
+                                              fill="#4F46E5"></path>
+                                    </svg>
+                                </span>
+                                <span>Lifetime Free Updates</span>
+                            </li>
+                            <li class="mb-15">
+                                <span class="icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10.0001 18.3333C14.6025 18.3333 18.3334 14.6024 18.3334 10C18.3334 5.39763 14.6025 1.66667 10.0001 1.66667C5.39771 1.66667 1.66675 5.39763 1.66675 10C1.66675 14.6024 5.39771 18.3333 10.0001 18.3333Z"
+                                              fill="#ABA8DF"></path>
+                                        <path d="M16.1341 4.3591C16.5131 4.77108 16.8512 5.22134 17.1418 5.70343L10.3452 12.5C9.69441 13.1508 8.63908 13.1508 7.98824 12.5L5.66082 10.1726C5.33539 9.84717 5.33539 9.3195 5.66082 8.99408C5.98626 8.66867 6.5139 8.66867 6.83934 8.99408L9.16675 11.3215L16.0775 4.41074C16.0957 4.39251 16.1146 4.37529 16.1341 4.3591Z"
+                                              fill="#4F46E5"></path>
+                                    </svg>
+                                </span>
+                                <span>12 Months Support</span>
+                            </li>
+                            <li class="mb-15">
+                                <span class="icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10.0001 18.3333C14.6025 18.3333 18.3334 14.6024 18.3334 10C18.3334 5.39763 14.6025 1.66667 10.0001 1.66667C5.39771 1.66667 1.66675 5.39763 1.66675 10C1.66675 14.6024 5.39771 18.3333 10.0001 18.3333Z"
+                                              fill="#ABA8DF"></path>
+                                        <path d="M16.1341 4.3591C16.5131 4.77108 16.8512 5.22134 17.1418 5.70343L10.3452 12.5C9.69441 13.1508 8.63908 13.1508 7.98824 12.5L5.66082 10.1726C5.33539 9.84717 5.33539 9.3195 5.66082 8.99408C5.98626 8.66867 6.5139 8.66867 6.83934 8.99408L9.16675 11.3215L16.0775 4.41074C16.0957 4.39251 16.1146 4.37529 16.1341 4.3591Z"
+                                              fill="#4F46E5"></path>
+                                    </svg>
+                                </span>
+                                <span>SCSS Files and Documentation</span>
+                            </li>
+                        </ul>
+                        <h1 class="my-4">Price: @Model.ProductPrice.ToString("N0") đ</h1>
+                        <a asp-controller="Product" asp-action="AddToCart" asp-route-productid="@Model.Id" asp-route-returnUrl="@Context.Request.Path" class="scroll-btn btn primary-btn btn-lg w-100 text-center mb-25">
+                            Add to cart
+                        </a>
+                        <a href="#"
+                           class="btn primary-light-btn btn-lg w-100 text-center" target="_blank" rel="noopener nofollow">
+                            Buy
+                        </a>
+                    </div>
+                    <div class="box-style mb-30" id="uideck_product_information-2">
+                        <h3 class="mb-20 text-bold">Template Parameters</h3>
+                        <ul class="parameters">
+                            <li>
+                                <div class="left">
+                                    <span class="icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M19 4H5C3.34315 4 2 5.34315 2 7V19C2 20.6569 3.34315 22 5 22H19C20.6569 22 22 20.6569 22 19V7C22 5.34315 20.6569 4 19 4Z"
+                                                  fill="#AFB4BF"></path>
+                                            <path d="M2 7C2 5.34315 3.34315 4 5 4H19C20.6569 4 22 5.34315 22 7V10H2V7Z"
+                                                  fill="#4A5463"></path>
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M7 2C7.55228 2 8 2.44772 8 3V5C8 5.55228 7.55228 6 7 6C6.44772 6 6 5.55228 6 5V3C6 2.44772 6.44772 2 7 2Z"
+                                                  fill="#AFB4BF"></path>
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M17 2C17.5523 2 18 2.44772 18 3V5C18 5.55228 17.5523 6 17 6C16.4477 6 16 5.55228 16 5V3C16 2.44772 16.4477 2 17 2Z"
+                                                  fill="#AFB4BF"></path>
+                                        </svg>
+                                    </span>
+                                    <span class="text-black">
+                                        Released on:
+                                    </span>
+                                    <span class="text-sm">August 22, 2020</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="left">
+                                    <span class="icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z"
+                                                  fill="#4A5463"></path>
+                                            <path d="M12 2C9.38009 2.00672 6.8671 3.03969 4.99983 4.87744V3C4.99983 2.73478 4.89447 2.48043 4.70694 2.29289C4.5194 2.10536 4.26505 2 3.99983 2C3.73461 2 3.48026 2.10536 3.29272 2.29289C3.10519 2.48043 2.99983 2.73478 2.99983 3V7.5C2.99975 7.63134 3.02557 7.76141 3.0758 7.88277C3.12602 8.00413 3.19968 8.1144 3.29255 8.20728C3.38543 8.30015 3.4957 8.37381 3.61706 8.42404C3.73842 8.47426 3.86849 8.50008 3.99983 8.5H8.49983C8.76505 8.5 9.0194 8.39464 9.20694 8.20711C9.39447 8.01957 9.49983 7.76522 9.49983 7.5C9.49983 7.23478 9.39447 6.98043 9.20694 6.79289C9.0194 6.60536 8.76505 6.5 8.49983 6.5H6.21839C7.31674 5.3374 8.73907 4.53164 10.3009 4.18722C11.8628 3.8428 13.4921 3.97561 14.9775 4.56843C16.463 5.16124 17.736 6.18672 18.6316 7.51185C19.5272 8.83698 20.0039 10.4006 20 12C20 12.2652 20.1054 12.5196 20.2929 12.7071C20.4804 12.8946 20.7348 13 21 13C21.2652 13 21.5196 12.8946 21.7071 12.7071C21.8947 12.5196 22 12.2652 22 12C21.9969 9.34879 20.9423 6.80706 19.0676 4.93237C17.1929 3.05768 14.6512 2.00311 12 2ZM19.9886 15.5H15.4886C15.2234 15.5 14.969 15.6054 14.7815 15.7929C14.594 15.9804 14.4886 16.2348 14.4886 16.5C14.4886 16.7652 14.594 17.0196 14.7815 17.2071C14.969 17.3946 15.2234 17.5 15.4886 17.5H17.7817C16.6833 18.6626 15.261 19.4684 13.6991 19.8128C12.1373 20.1572 10.508 20.0244 9.02252 19.4316C7.53707 18.8388 6.264 17.8133 5.36843 16.4882C4.47286 15.163 3.99611 13.5994 4.00001 12C4.00001 11.7348 3.89465 11.4804 3.70712 11.2929C3.51958 11.1054 3.26523 11 3.00001 11C2.73479 11 2.48044 11.1054 2.2929 11.2929C2.10537 11.4804 2.00001 11.7348 2.00001 12C1.99717 13.9692 2.57665 15.8954 3.66559 17.5362C4.75453 19.1769 6.3043 20.4591 8.12001 21.2214C9.93571 21.9838 11.9363 22.1922 13.8702 21.8206C15.804 21.4489 17.5848 20.5137 18.9886 19.1327V21C18.9886 21.2652 19.094 21.5196 19.2815 21.7071C19.469 21.8946 19.7234 22 19.9886 22C20.2538 22 20.5082 21.8946 20.6957 21.7071C20.8832 21.5196 20.9886 21.2652 20.9886 21V16.5C20.9887 16.3687 20.9629 16.2386 20.9126 16.1172C20.8624 15.9959 20.7887 15.8856 20.6959 15.7927C20.603 15.6999 20.4927 15.6262 20.3714 15.576C20.25 15.5257 20.1199 15.4999 19.9886 15.5Z"
+                                                  fill="#AFB4BF"></path>
+                                        </svg>
+                                    </span>
+                                    <span class="text-black">
+                                        Last Updated on:
+                                    </span>
+                                    <span class="text-sm">June 22, 2021</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="left">
+                                    <span class="icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7.99241 4.78709C8.49592 4.50673 8.91189 4.07694 9.09414 3.53021L9.48169 2.36754C9.75392 1.55086 10.5182 1 11.3791 1H12.621C13.4819 1 14.2462 1.55086 14.5184 2.36754L14.9059 3.53021C15.0882 4.07694 15.5042 4.50673 16.0077 4.78709C16.086 4.83069 16.1635 4.87554 16.2402 4.92159C16.7349 5.21857 17.3158 5.36438 17.8811 5.2487L19.0828 5.00279C19.9262 4.8302 20.7854 5.21666 21.2158 5.96218L21.8368 7.03775C22.2672 7.78328 22.1723 8.72059 21.6011 9.36469L20.7862 10.2838C20.4042 10.7144 20.2392 11.2888 20.2483 11.8644C20.2497 11.9548 20.2497 12.0452 20.2483 12.1356C20.2392 12.7111 20.4043 13.2855 20.7862 13.7162L21.6011 14.6352C22.1723 15.2793 22.2672 16.2167 21.8368 16.9622L21.2158 18.0378C20.7854 18.7833 19.9262 19.1697 19.0828 18.9971L17.8811 18.7512C17.3159 18.6356 16.735 18.7814 16.2403 19.0784C16.1636 19.1244 16.086 19.1693 16.0077 19.2129C15.5042 19.4933 15.0882 19.9231 14.9059 20.4698L14.5184 21.6325C14.2462 22.4491 13.4819 23 12.621 23H11.3791C10.5182 23 9.75392 22.4491 9.48169 21.6325L9.09414 20.4698C8.91189 19.9231 8.49592 19.4933 7.99241 19.2129C7.91407 19.1693 7.83652 19.1244 7.75977 19.0784C7.26508 18.7814 6.68421 18.6356 6.11893 18.7512L4.91724 18.9971C4.07385 19.1697 3.21465 18.7833 2.78422 18.0378L2.16324 16.9622C1.73281 16.2167 1.82773 15.2793 2.39889 14.6352L3.21391 13.7161C3.59582 13.2854 3.76088 12.7111 3.75176 12.1355C3.75033 12.0452 3.75033 11.9548 3.75176 11.8644C3.76088 11.2889 3.59583 10.7145 3.21391 10.2838L2.39889 9.36469C1.82773 8.72059 1.73281 7.78328 2.16324 7.03775L2.78422 5.96218C3.21465 5.21665 4.07385 4.8302 4.91724 5.00278L6.11901 5.24871C6.68429 5.36439 7.26514 5.21857 7.75984 4.9216C7.83656 4.87554 7.91409 4.83069 7.99241 4.78709Z"
+                                                  fill="#AFB4BF"></path>
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z"
+                                                  fill="#4A5463"></path>
+                                        </svg>
+                                    </span>
+                                    <span class="text-black">
+                                        Built with:
+                                    </span>
+                                    <span class="text-sm"><a href="#">Bootstrap</a></span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="left">
+                                    <span class="icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M21 2H9C8.44803 1.99969 8.00031 2.44689 8 2.99886C8 2.99924 8 2.99962 8 3V7H16C16.552 6.99969 16.9997 7.44689 17 7.99886C17 7.99924 17 7.99962 17 8V16H21C21.552 16.0003 21.9997 15.5531 22 15.0011C22 15.0008 22 15.0004 22 15V3C22.0003 2.44803 21.5531 2.00031 21.0011 2C21.0008 2 21.0004 2 21 2Z"
+                                                  fill="#C0C7DD"></path>
+                                            <path d="M3 12H11C11.5523 12 12 12.4477 12 13V21C12 21.5523 11.5523 22 11 22H3C2.44772 22 2 21.5523 2 21V13C2 12.4477 2.44772 12 3 12Z"
+                                                  fill="#4A5463"></path>
+                                            <path d="M16 7H6C5.44803 6.99969 5.00031 7.44689 5 7.99886C5 7.99924 5 7.99962 5 8V12H11C11.552 11.9997 11.9997 12.4469 12 12.9989C12 12.9992 12 12.9996 12 13V19H16C16.552 19.0003 16.9997 18.5531 17 18.0011C17 18.0008 17 18.0004 17 18V8C17.0003 7.44803 16.5531 7.00031 16.0011 7C16.0008 7 16.0004 7 16 7Z"
+                                                  fill="#AFB4BF"></path>
+                                        </svg>
+                                    </span>
+                                    <span class="text-black">
+                                        Version:
+                                    </span>
+                                    <span class="text-sm">1.0</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="left">
+                                    <span class="icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8 3H6C4.34315 3 3 4.34315 3 6V8C3 9.65685 4.34315 11 6 11H8C9.65685 11 11 9.65685 11 8V6C11 4.34315 9.65685 3 8 3Z"
+                                                  fill="#4A5463"></path>
+                                            <path d="M8 13H6C4.34315 13 3 14.3431 3 16V18C3 19.6569 4.34315 21 6 21H8C9.65685 21 11 19.6569 11 18V16C11 14.3431 9.65685 13 8 13Z"
+                                                  fill="#4A5463"></path>
+                                            <path d="M18 3H16C14.3431 3 13 4.34315 13 6V8C13 9.65685 14.3431 11 16 11H18C19.6569 11 21 9.65685 21 8V6C21 4.34315 19.6569 3 18 3Z"
+                                                  fill="#4A5463"></path>
+                                            <path d="M18 13H16C14.3431 13 13 14.3431 13 16V18C13 19.6569 14.3431 21 16 21H18C19.6569 21 21 19.6569 21 18V16C21 14.3431 19.6569 13 18 13Z"
+                                                  fill="#AFB4BF"></path>
+                                        </svg>
+                                    </span>
+                                    <span class="text-black">
+                                        Category:
+                                    </span>
+                                    <span class="text-sm">
+                                        <a href="https://uideck.com/templates/category/all/" rel="tag"
+                                           class="local-link">All</a>, <a href="https://uideck.com/templates/category/bootstrap-business-templates/"
+                                                                          rel="tag" class="local-link">Business &amp; Corporate</a>
+                                    </span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <aside class="single_sidebar_widget tag_cloud_widget">
+                        <h4 class="widget_title" style="color: #2d2d2d;">Tag Clouds</h4>
+                        <ul class="list">
+                            <li>
+                                <a href="#">project</a>
+                            </li>
+                            <li>
+                                <a href="#">love</a>
+                            </li>
+                            <li>
+                                <a href="#">technology</a>
+                            </li>
+                            <li>
+                                <a href="#">travel</a>
+                            </li>
+                            <li>
+                                <a href="#">restaurant</a>
+                            </li>
+                            <li>
+                                <a href="#">life style</a>
+                            </li>
+                            <li>
+                                <a href="#">design</a>
+                            </li>
+                            <li>
+                                <a href="#">illustration</a>
+                            </li>
+                        </ul>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+@section Scripts{
+    <script>
+        async function add(productId) {
+            try {
+                var response = await fetch(`/Cart/AddItem?productId=${productId}`);
+                if (response.status == 200) {
+                    var result = await response.json();
+                    var cartCountEl = document.getElementById("cartCount");
+                    cartCountEl.innerHTML = result;
+                    window.location.href = "#cartCount";
+                }
+            }
+            catch (err) {
+                console.log(err);
+            }
+        }
+    </script>
+}

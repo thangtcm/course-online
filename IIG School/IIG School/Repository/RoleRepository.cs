@@ -1,0 +1,14 @@
+﻿using IIG_School.Data;
+using IIG_School.Repository.GenericRepository;
+using IIG_School.Repository.Interface;
+using Microsoft.AspNetCore.Identity;
+
+namespace IIG_School.Repository
+{
+    public class RoleRepository : GenericRepository<IdentityRole>, IRoleRepository
+    {
+        public RoleRepository(ApplicationDbContext dbContext) : base(dbContext)
+        {
+        }
+    }
+}

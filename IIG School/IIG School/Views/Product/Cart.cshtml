@@ -1,0 +1,103 @@
+﻿@model List<IIG_School.Models.CartItem>
+@{
+    ViewData["Title"] = "Cart";
+}
+
+<section class="slider-area slider-area2">
+    <div class="slider-active">
+        <!-- Single Slider -->
+        <div class="single-slider slider-height2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-8 col-lg-11 col-md-12">
+                        <div class="hero__caption hero__caption2">
+                            <h1 data-animation="bounceIn" data-delay="0.2s">Our courses</h1>
+                            <!-- breadcrumb Start-->
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="#">@ViewData["Title"]</a></li>
+                                </ol>
+                            </nav>
+                            <!-- breadcrumb End -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="courses-area section-padding40 fix">
+    <div class="container">
+        @if (Model.Count > 0)
+        {
+            double total = 0;
+            int stt = 1;
+
+            <table class="table">
+                <tr>
+                    <th>#</th>
+                    <th>Sản phẩm</th>
+                    <th>Giá</th>
+                    <th>Số lượng</th>
+                    <th>Thành tiền</th>
+                    <th></th>
+                </tr>
+                @foreach (var cartitem in Model)
+                {
+                    var thanhtien = cartitem.quantity * (cartitem.product.ProductPrice - cartitem.product.ProductSale);
+                    total += thanhtien;
+                    <tr>
+                        <td>@(stt++)</td>
+                        <td>@cartitem.product.ProductName</td>
+                        <td>@(cartitem.product.ProductPrice.ToString("n0"))</td>
+                        <td><input asp-for="@cartitem.quantity" id="@($"quantity-{cartitem.product.Id}")" /></td>
+                        <td>@(thanhtien.ToString("n0"))</td>
+                        <td>
+                            <button class="btn btn-success updatecartitem"
+                            data-productid="@cartitem.product.Id">
+                                Update
+                            </button>
+                            <a asp-action="RemoveCart" asp-route-productid="@cartitem.product.Id" asp-route-returnUrl="@Context.Request.Path"
+                       class="btn btn-danger">Remove</a>
+                        </td>
+                    </tr>
+                }
+                <tr>
+                    <td colspan="4" class="text-right">Tổng tiền</td>
+                    <td>@(total.ToString("n0"))</td>
+                    <td></td>
+                </tr>
+            </table>
+
+            <a asp-controller="Product" asp-action="Checkout" class="btn btn-success">Submit order</a>
+        }
+        else
+        {
+            <p class="alert alert-danger">Cart Empty</p>
+        }
+    </div>
+</section>
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $(".updatecartitem").click(function (event) {
+                event.preventDefault();
+                var productid = $(this).attr("data-productid");
+                var quantity = $("#quantity-" + productid).val();
+                $.ajax({
+                    type: "POST",
+                    url: "@Url.RouteUrl("updatecart")",
+                    data: {
+                        productid: productid,
+                        quantity: quantity
+                    },
+                    success: function (result) {
+                        window.location.href = "@Url.RouteUrl("cart")";
+                    }
+                });
+            });
+        });
+    </script>
+}
